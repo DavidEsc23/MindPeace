@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { check, validationResult } = require('express-validator');
-const { hashPassword, generateToken } = require('../services/authService');
+const { hashPassword, generateToken, loginUser } = require('../services/authService');
 
 // Registrar User
 router.post(
@@ -40,6 +40,47 @@ router.post(
             await user.save();
 
             // Crear un token JWT (JSON Web Token) para el usuario
+            const token = generateToken(user);
+            res.json({ token });
+
+        } catch (err) {
+            console.error(err.message);
+            res.status(500).send('Error en el servidor');
+        }
+    }
+);
+
+// Login de Usuario
+router.post(
+    '/login',
+    [
+        // Validación de datos
+        check('email', 'Por favor incluye un email válido').isEmail(),
+        check('password', 'La contraseña es requerida').exists()
+    ],
+    async (req, res) => {
+        // Verificar errores de validación
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const { email, password } = req.body;
+
+        try {
+            // Buscar al usuario en la base de datos
+            let user = await User.findOne({ email });
+            if (!user) {
+                return res.status(400).json({ msg: 'Credenciales inválidas' });
+            }
+
+            // Comparar la contraseña ingresada con la almacenada en la base de datos
+            const isMatch = await bcrypt.compare(password, user.password);
+            if (!isMatch) {
+                return res.status(400).json({ msg: 'Credenciales inválidas' });
+            }
+
+            // Generar un token JWT y responder con él
             const token = generateToken(user);
             res.json({ token });
 
