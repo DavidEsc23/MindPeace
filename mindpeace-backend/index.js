@@ -14,10 +14,12 @@ app.get('/', (req, res) => {
     res.send('Bienvenido a MindPeace API');
 });
 
+// Rutas para el manejo de usuarios (registro, autenticación, etc.)
+app.use('/api/users', require('./routes/users'));
+
 // Conectar a MongoDB
 mongoose.connect(process.env.MONGODB_URI)
    .then(() => console.log('Conectado a MongoDB'))
    .catch(err => console.log('Error al conectar con MongoDB:', err));
-
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
