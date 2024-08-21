@@ -139,3 +139,69 @@
     border: none;
     border-top: 1px solid #ccc;
   }
+ 
+  .input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    background-color: white; /* Color de fondo por defecto */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-group input:hover,
+.input-group input:focus,
+.input-group input:active {
+    background-color: #a0cae8; /* Cambia el fondo a un color azul claro */
+    border-color: #1a73e8; /* Cambia el color del borde a azul */
+}
+
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: 
+  #2E3B55;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave para el color y el tamaño */
+}
+
+.register-button:hover {
+  background-color: #155ab8; /* Cambia a un tono más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente */
+}
+
+.register-button:active {
+  transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic para dar sensación de pulsación */
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #f3f6f6;
+  background-image: url('/public/icons/Volver.png'); /* Ruta de la imagen de ícono de retroceso */
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Asegura que el enlace se comporte como un botón */
+}
+
+.back-button:hover {
+  background-color: #f3f6f6;
+  transform: scale(1.05);
+}

@@ -5,6 +5,14 @@ import './login.css';
 function LoginPage() {
     const navigate = useNavigate();
 
+    const handleLogin = (e) => {
+        e.preventDefault(); // Prevenir comportamiento por defecto
+        // Aquí podrías manejar la autenticación, por ejemplo, enviando los datos a tu API
+
+        // Redirigir a la página principal
+        navigate('/App');
+    };
+
     const handleRegisterClick = (e) => {
         e.preventDefault(); // Prevenir comportamiento por defecto del enlace
         navigate('/register'); // Navega a la página de registro
@@ -12,10 +20,11 @@ function LoginPage() {
 
     return (
         <div className="login-container">
+            <a href="/Intro" className="back-button"></a>
             <div className="login-box">
                 <h2>Iniciar Sesión</h2>
                 <p>Juntos hacia un estado de calma y bienestar.</p>
-                <form>
+                <form onSubmit={handleLogin}>
                     <div className="input-group">
                         <label htmlFor="email">Correo</label>
                         <input type="email" id="email" name="email" required />

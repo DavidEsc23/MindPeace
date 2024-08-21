@@ -1,13 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './register.css'; // Ajusta la ruta según sea necesario
 
 function RegisterPage() {
+    const navigate = useNavigate(); // Hook para navegación
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevenir comportamiento por defecto
+        // Aquí podrías manejar el registro, por ejemplo, enviando los datos a tu API
+
+        // Redirigir a la página de inicio de sesión
+        navigate('/login');
+    };
+
     return (
         <div className="register-container">
+            <a href="/Intro" className="back-button"></a>
             <div className="register-image"></div>
             <div className="register-box">
                 <h2>Tu viaje hacia la tranquilidad empieza aquí</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label htmlFor="name">Nombre</label>
                         <input type="text" id="name" name="name" required />

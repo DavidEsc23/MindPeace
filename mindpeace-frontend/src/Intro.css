@@ -1,0 +1,78 @@
+.intro-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('/public/icons/Fondo.svg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.intro-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px; 
+    height: 100px;
+    background-image: url('/public/icons/MindPeace.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-links {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+}
+
+.menu-link {
+    color:#273147;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+    color: #ddd;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin-top: 150px; /* Ajusta el margen superior según sea necesario */
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 3s ease-in-out; /* Añade la animación para que aparezca despacio */
+    color: #2E3B55;
+}
+
+.intro-description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #19202F;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
