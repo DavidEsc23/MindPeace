@@ -1,16 +1,46 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
-import './register.css'; // Ajusta la ruta según sea necesario
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './register.css';
 
 function RegisterPage() {
-    const navigate = useNavigate(); // Hook para navegación
+    const navigate = useNavigate(); 
+    const [formData, setFormData] = useState({
+        username: '', // Asegúrate de que 'username' está sincronizado con el backend
+        email: '',
+        password: '',
+        confirmPassword: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevenir comportamiento por defecto
-        // Aquí podrías manejar el registro, por ejemplo, enviando los datos a tu API
+        e.preventDefault();
 
-        // Redirigir a la página de inicio de sesión
-        navigate('/login');
+        // Validar que las contraseñas coincidan
+        if (formData.password !== formData.confirmPassword) {
+            alert('Las contraseñas no coinciden');
+            return;
+        }
+
+        // Enviar los datos al backend
+        axios.post('http://localhost:5000/api/users/register', {
+            username: formData.username, // Enviar 'username' en lugar de 'name'
+            email: formData.email,
+            password: formData.password
+        })
+        .then(response => {
+            console.log('Registro exitoso:', response.data);
+            navigate('/login');
+        })
+        .catch(error => {
+            console.error('Hubo un error con el registro:', error);
+        });
     };
 
     return (
@@ -21,20 +51,20 @@ function RegisterPage() {
                 <h2>Tu viaje hacia la tranquilidad empieza aquí</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
-                        <label htmlFor="name">Nombre</label>
-                        <input type="text" id="name" name="name" required />
+                        <label htmlFor="username">Nombre</label>
+                        <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="email">Correo Electronico</label>
-                        <input type="email" id="email" name="email" required />
+                        <label htmlFor="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" id="password" name="password" required />
+                        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="confirm-password">Confirmar Contraseña</label>
-                        <input type="password" id="confirm-password" name="confirm-password" required />
+                        <input type="password" id="confirm-password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
                     </div>
                     <button type="submit" className="register-button">Registrarse</button>
                 </form>
