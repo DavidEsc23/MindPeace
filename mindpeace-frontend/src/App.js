@@ -5,9 +5,12 @@ import './App.css';
 import LoginPage from './login';
 import RegisterPage from './register';
 import IntroPage from './Intro';
+import FormularioPage from './Formulario';
 import './login.css'
 import './register.css';
 import './Intro.css';
+import './form.css';
+
 
 function App() {
     const [message, setMessage] = useState('');
@@ -25,6 +28,10 @@ function App() {
 
     const handleLoginClick = () => {
         navigate('/Login'); // Redirige a la página de inicio de sesión
+    };
+    
+    const handleFormuClick = () => {
+        navigate('/Formulario'); // Redirige a la ruta /Formulario
     };
 
     return (
@@ -46,9 +53,9 @@ function App() {
                     <img src="/icons/confi.svg" alt="Configuración" />
                     <p>CONFIGURACIÓN<br /><span>Perfil</span></p>
                 </div>
-                <div className="icon-item">
+                <div className="icon-item" onClick={handleFormuClick} style={{ cursor: 'pointer' }}>
                     <img src="/icons/test.svg" alt="Test de Ansiedad" />
-                 <p>TEST<br /><span>De ansiedad</span></p>
+                    <p>TEST<br /><span>De ansiedad</span></p>
                 </div>
             </div>
         </div>
@@ -66,6 +73,7 @@ function MainApp() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/Intro" element={<IntroPage />} />
+                <Route path="/Formulario" element={<FormularioPage />} />
             </Routes>
         </BrowserRouter>
     );

@@ -1,0 +1,213 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 10px; /* Reduce el padding para que el header sea más pequeño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto; /* Para evitar que tenga un tamaño fijo */
+  }
+  
+  
+  .header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .user-info {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .main-content {
+    background-image: url('/public/icons/Fondo.svg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px; /* Ajusta el tamaño de acuerdo a tus preferencias */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #2E3B55;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeInText 2s forwards; /* Animación de desvanecimiento */
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+
+  .main-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .main-content h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .main-content p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+  }
+  
+  .start-button {
+    background-color: #2E3B55;
+    color: white;
+    padding: 15px 15px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .cuerpo-note {
+    /* margin-top: 30px; */
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #000;
+    justify-content: center;
+    text-align: center;
+  }
+.warning-message {
+    display: flex;
+    align-items: center;  /* Centra la imagen y el texto verticalmente */
+    gap: 15px;            /* Espacio entre la imagen y el texto */
+    max-width: 600px;     /* Puedes ajustar el ancho según prefieras */
+    margin: 0 auto;       /* Centra el mensaje en la página */
+  }
+  
+  .warning-icon {
+    width: 50px;  /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 50px;
+  }
+  
+  .warning-message p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .questions-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .questions-container h3 {
+    text-align: center;
+    color: #2E3B55;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: center;
+    gap: 35px; 
+  }
+  
+  .options button {
+    background-color: #DCE6F7;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .options button:hover {
+    background-color: #B0C4DE;
+  }
+  
+  .results-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #2E3B55;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .results-container h3 {
+    color: #2E3B55;
+  }
+  
+  .results-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .results-container li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .start-button {
+    background-color: #2E3B55;
+    color: white;
+    padding: 15px 15px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+  
+  .start-button:hover {
+    background-color: #4A69A1; /* Cambia de color al pasar el cursor */
+  }
+  
+  .start-button:active {
+    transform: scale(1.1); /* Aumenta de tamaño al hacer clic */
+  }
+  
