@@ -14,6 +14,13 @@ function FormularioPage() {
     setShowResults(true); // Mostrar resultados y ocultar formulario
   };
 
+  const handleOptionClick = (questionIndex, option) => {
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [questionIndex]: option,
+    }));
+  };
+
   return (
     <div className="container">
       <header className="header">
@@ -55,12 +62,32 @@ function FormularioPage() {
             <div className="question">
               <label>1. ¿Te sientes torpe o entumecido?</label>
               <div className="options">
-                <button type="button">No</button>
-                <button type="button">Leve</button>
-                <button type="button">Moderado</button>
-                <button type="button">Bastante</button>
+                <button
+                  type="button"
+                  className={answers[1] === 'No' ? 'active' : ''}
+                  onClick={() => handleOptionClick(1, 'No')}> No 
+                </button>
+                  
+                <button
+                  type="button"
+                  className={answers[1] === 'Leve' ? 'active' : ''}
+                  onClick={() => handleOptionClick(1, 'Leve')}>Leve
+                </button>
+
+                <button
+                  type="button"
+                  className={answers[1] === 'Moderado' ? 'active' : ''}
+                  onClick={() => handleOptionClick(1, 'Moderado')}>Moderado
+                </button>
+
+                <button
+                  type="button"
+                  className={answers[1] === 'Bastante' ? 'active' : ''}
+                  onClick={() => handleOptionClick(1, 'Bastante')}>Bastante
+                </button>
               </div>
             </div>
+
             <div className="question">
               <label>2. ¿Te has sentido acalorado?</label>
               <div className="options">

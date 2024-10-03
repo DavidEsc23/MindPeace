@@ -211,3 +211,16 @@ body {
     transform: scale(1.1); /* Aumenta de tamaño al hacer clic */
   }
   
+  button {
+    padding: 10px;
+    margin: 5px;
+    background-color: lightgray;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background-color: green;
+    color: white;
+  }
+  
