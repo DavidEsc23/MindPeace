@@ -17,29 +17,26 @@ function LoginPage() {
         });
     };
 
-    const handleLogin = (e) => {
-        e.preventDefault(); 
+    const [errorMessage, setErrorMessage] = useState('');
 
-        // Aquí puedes enviar la petición a tu API de inicio de sesión
+    const handleLogin = (e) => {
+        e.preventDefault();
+
         axios.post('http://localhost:5000/api/users/login', {
             email: formData.email,
             password: formData.password
         })
         .then(response => {
-            // Supongamos que el token de autenticación está en response.data.token
             const token = response.data.token;
-            console.log('login exitoso:', response.data);
-            
-            // Guarda el token en localStorage o sessionStorage
             localStorage.setItem('authToken', token);
-
-            // Redirige a la página principal
-            navigate('/App');
+            navigate('/menuUser');
         })
         .catch(error => {
             console.error('Error al iniciar sesión:', error);
+            setErrorMessage('Error al iniciar sesión. Verifique sus credenciales.');
         });
     };
+
 
     const handleRegisterClick = (e) => {
         e.preventDefault(); 

@@ -1,0 +1,98 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo excepto el título */
+    background-color: #1c1c1c;
+    color: white;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url('/public/icons/fondo.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  
+  .menu-title {
+    font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
+    font-size: 14em;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .menu-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .menu-item {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
+  .search-input {
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 15px;
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Color del texto */
+    border: 1px solid white; /* Bordes blancos para visibilidad */
+  }
+  .search-input::placeholder {
+    color: white; /* Color del texto del placeholder */
+    opacity: 0.7; /* Transparencia del placeholder */
+  }
+  
+  .search-button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.2em;
+    margin-left: -30px;
+    cursor: pointer;
+  }
+  
+  .menu-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .icon-item {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  
+  .icon-item img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-item p {
+    margin: 5px 0 0 0;
+    font-weight: normal;
+  }
+  
+  .icon-item span {
+    font-size: 0.8em;
+    color: #bbb;
+    font-weight: normal;
+  }
+  
+  
+  
