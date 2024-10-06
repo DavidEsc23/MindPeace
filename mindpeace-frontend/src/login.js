@@ -1,21 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './login.css';
 
 function LoginPage() {
     const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
     const handleLogin = (e) => {
-        e.preventDefault(); // Prevenir comportamiento por defecto
-        // Aquí podrías manejar la autenticación, por ejemplo, enviando los datos a tu API
+        e.preventDefault(); 
 
-        // Redirigir a la página principal
-        navigate('/App');
+        // Aquí puedes enviar la petición a tu API de inicio de sesión
+        axios.post('http://localhost:5000/api/users/login', {
+            email: formData.email,
+            password: formData.password
+        })
+        .then(response => {
+            // Supongamos que el token de autenticación está en response.data.token
+            const token = response.data.token;
+            console.log('login exitoso:', response.data);
+            
+            // Guarda el token en localStorage o sessionStorage
+            localStorage.setItem('authToken', token);
+
+            // Redirige a la página principal
+            navigate('/App');
+        })
+        .catch(error => {
+            console.error('Error al iniciar sesión:', error);
+        });
     };
 
     const handleRegisterClick = (e) => {
-        e.preventDefault(); // Prevenir comportamiento por defecto del enlace
-        navigate('/register'); // Navega a la página de registro
+        e.preventDefault(); 
+        navigate('/register'); 
     };
 
     return (
@@ -27,11 +55,11 @@ function LoginPage() {
                 <form onSubmit={handleLogin}>
                     <div className="input-group">
                         <label htmlFor="email">Correo</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
                         <label htmlFor="password">Contraseña</label>
-                        <input type="password" id="password" name="password" required />
+                        <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
                     </div>
                     <button type="submit" className="login-button">Iniciar Sesión</button>
                 </form>
