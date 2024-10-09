@@ -1,31 +1,54 @@
-.intro-container {
-    position: relative;
-    height: 100vh;
-    background-image: url('/public/icons/Fondo.svg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+/* Añadimos una animación de desvanecimiento y subida para los textos */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Efecto global para eliminar márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-container {
+    font-family: Arial, sans-serif;
+    color: #19202F;
+    width: 100vw;
+    overflow-x: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
 .intro-header {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 40px;
+    z-index: 10;
 }
 
 .logo {
-    width: 100px; 
-    height: 100px;
-    background-image: url('/public/icons/MindPeace.png'); 
+    width: 130px;
+    height: 130px;
+    background-image: url('/public/icons/MindPeace.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -34,45 +57,295 @@
 .menu-links {
     display: flex;
     gap: 30px;
-    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+    margin-right: 40px;
 }
 
 .menu-link {
-    color:#273147;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out; /* Transición suave */
 }
 
 .menu-link:hover {
     color: #ddd;
+    transform: scale(1.1); /* Pequeño aumento al hacer hover */
+    transition: transform 0.3s ease-in-out;
 }
 
-.intro-content {
-    max-width: 800px;
-    margin-top: 150px; /* Ajusta el margen superior según sea necesario */
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-image: url('/public/icons/Fondo.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+    max-width: 100%; /* Evita márgenes laterales extra */
+    margin: 0 auto; /* Centra el contenido */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal en estas secciones */
+    background-attachment: fixed; /* Parallax */
 }
 
 .intro-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    animation: fadeIn 3s ease-in-out; /* Añade la animación para que aparezca despacio */
-    color: #2E3B55;
+    color: #000000;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out; /* Animación suave de entrada */
 }
 
 .intro-description {
-    margin-top: 20px;
     font-size: 1.2rem;
+    max-width: 600px;
+    animation: fadeInUp 1.5s ease-in-out; /* Animación un poco más lenta */
+}
+
+/* Sección adicional */
+.additional-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #FFFFFF;
+    width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+    max-width: 100%; /* Evita que haya márgenes laterales */
+    width: 100vw;
+}
+
+.info-image {
+    position: relative;
+}
+
+.info-image img {
+    width: 400px;
+    border-radius: 20px;
+}
+
+/* Cajas flotantes */
+.floating-box {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    text-align: center;
+}
+
+.box-5plus {
+    top: 10%; /* Ajuste vertical */
+    right: -60px; /* Ajuste horizontal para que quede a la derecha de la imagen */
+}
+
+.box-10plus {
+    top: 10%; /* Ajuste vertical */
+    left: -60px; /* Ajuste horizontal para que quede a la izquierda de la imagen */
+}   
+
+.box-100plus {
+    bottom: -20px; /* Ajuste vertical */
+    right: -50px; /* Ajuste horizontal para que quede en la esquina inferior derecha de la imagen */
+}
+
+.floating-box h3 {
+    font-size: 1.5rem;
+    color: #2E3B55;
+}
+
+.floating-box p {
+    font-size: 1rem;
     color: #19202F;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.info-content {
+    max-width: 600px;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.info-content h2 {
+    font-size: 2rem;
+    color: #273147;
+}
+
+.info-content p {
+    font-size: 1.2rem;
+    color: #19202F;
+    margin-top: 10px;
+}
+
+/* Sección de ansiedad */
+.anxiety-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: -50px; /* Reduce el espacio entre el texto y la imagen */
+    padding: 70px 260px;
+    background-color: #FFFFFF;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.anxiety-content {
+    max-width: 500px; 
+    text-align: left;
+    flex: 1;
+}
+
+.anxiety-content h2 {
+    font-size: 2.5rem;
+    color: #1E293B;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.anxiety-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #475569;
+}
+
+.anxiety-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.anxiety-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+/* Cajas flotantes */
+.floating-box {
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    text-align: center;
+}
+
+.box-10plus {
+    top: 10%;
+    right: -50px;
+}
+
+.box-3plus {
+    bottom: 15%;
+    left: -50px;
+}
+
+.box-100plus {
+    bottom: -10px;
+    right: -50px;
+}
+
+.box-10 {
+    top: 12%;
+    right: -10px;
+}
+
+.box-3 {
+    bottom: 15%;
+    left: -10px;
+}
+
+.box-100 {
+    bottom: -10px;
+    right: 10px;
+}
+
+.floating-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563EB;
+}
+
+.floating-box p {
+    font-size: 1rem;
+    color: #64748B;
+}
+
+/* Sección de llamada a la acción (CTA) */
+.cta-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+}
+
+.cta-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.cta-button {
+    margin-top: 30px;
+}
+
+.cta-button button {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cta-button button:hover {
+    background-color: #1E40AF;
+}
+
+/* Footer */
+.footer {
+    width: 100vw;
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #7B7B7B;
 }
