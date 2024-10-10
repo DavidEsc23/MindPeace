@@ -8,6 +8,8 @@ import IntroPage from './Intro';
 import './login.css'
 import './register.css';
 import './Intro.css';
+import RegisterPageV2 from './registerV2';
+import './registerV2.css'
 
 function App() {
     const [message, setMessage] = useState('');
@@ -66,6 +68,7 @@ function MainApp() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/Intro" element={<IntroPage />} />
+                <Route path="/registerV2" element={<RegisterPageV2 />} />
             </Routes>
         </BrowserRouter>
     );

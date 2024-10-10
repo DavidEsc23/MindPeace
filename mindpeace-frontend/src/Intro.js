@@ -7,7 +7,7 @@ function IntroPage() {
 
     const handleRegisterClick = (e) => {
         e.preventDefault(); // Prevenir comportamiento por defecto del enlace
-        navigate('/register'); // Navega a la página de registro
+        navigate('/registerV2'); // Navega a la página de registro
     };
 
     const handleLoginClick = (e) => {
@@ -20,7 +20,7 @@ function IntroPage() {
             <div className="intro-header">
                 <div className="logo"></div>
                 <div className="menu-links">
-                    <a href="/register" className="menu-link" onClick={handleRegisterClick}>Regístrate</a>
+                    <a href="/registerV2" className="menu-link" onClick={handleRegisterClick}>Regístrate</a>
                     <a href="/login" className="menu-link" onClick={handleLoginClick}>Inicia sesión</a>
                 </div>
             </div>
