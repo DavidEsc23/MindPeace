@@ -15,7 +15,7 @@ function LoginPage() {
 
     const handleRegisterClick = (e) => {
         e.preventDefault(); // Prevenir comportamiento por defecto del enlace
-        navigate('/registerV2'); // Navega a la página de registro
+        navigate('/register'); // Navega a la página de registro
     };
 
     return (
@@ -36,7 +36,7 @@ function LoginPage() {
                     <button type="submit" className="login-button">Iniciar Sesión</button>
                 </form>
                 <p className="register-link">
-                    ¿No tienes una cuenta? <a href="/registerV2" onClick={handleRegisterClick}>Regístrate</a>
+                    ¿No tienes una cuenta? <a href="/register" onClick={handleRegisterClick}>Regístrate</a>
                 </p>
             </div>
         </div>

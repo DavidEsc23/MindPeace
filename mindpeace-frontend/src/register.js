@@ -4,9 +4,10 @@ import axios from 'axios';
 import './register.css';
 
 function RegisterPage() {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
-        username: '', 
+        username: '', // Cambié a "nombre" para coincidir con el nuevo diseño
         email: '',
         password: '',
         confirmPassword: ''
@@ -19,7 +20,7 @@ function RegisterPage() {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleLogin = (e) => {
         e.preventDefault();
 
         // Validar que las contraseñas coincidan
@@ -30,7 +31,7 @@ function RegisterPage() {
 
         // Enviar los datos al backend
         axios.post('http://localhost:5000/api/users/register', {
-            username: formData.username, // Enviar 'username' en lugar de 'name'
+            username: formData.nombre, // Ajustado según el nuevo campo "nombre"
             email: formData.email,
             password: formData.password
         })
@@ -46,16 +47,16 @@ function RegisterPage() {
     return (
         <div className="register-container">
             <a href="/Intro" className="back-button"></a>
-            <div className="register-image"></div>
             <div className="register-box">
-                <h2>Tu viaje hacia la tranquilidad empieza aquí</h2>
-                <form onSubmit={handleSubmit}>
+                <h2>Registrate</h2>
+                <p>Tu viaje hacia la tranquilidad empieza aquí.</p>
+                <form onSubmit={handleLogin}>
                     <div className="input-group">
-                        <label htmlFor="username">Nombre</label>
-                        <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} required />
+                        <label htmlFor="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="email">Correo Electrónico</label>
+                        <label htmlFor="email">Correo Electronico</label>
                         <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
                     </div>
                     <div className="input-group">
