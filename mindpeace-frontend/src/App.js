@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './login';
 import RegisterPage from './register';
 import IntroPage from './Intro';
-<<<<<<< HEAD
 import FormularioPage from './Formulario';
 import './login.css'
 import './register.css';
@@ -63,10 +62,6 @@ function App() {
 
 
 
-=======
-import MenuUserPage from './menuUser';  // Importa tu componente renombrado
-import PrivateRoute from './components/PrivateRoute';  // Para proteger rutas
->>>>>>> origin/main
 
 function MainApp() {
     return (
@@ -78,17 +73,7 @@ function MainApp() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/Intro" element={<IntroPage />} />
-<<<<<<< HEAD
                 <Route path="/Formulario" element={<FormularioPage />} />
-=======
-
-                {/* Ruta protegida */}
-                <Route path="/menuUser" element={
-                    <PrivateRoute>
-                        <MenuUserPage /> {/* Usa el componente renombrado */}
-                    </PrivateRoute>
-                } />
->>>>>>> origin/main
             </Routes>
         </BrowserRouter>
     );
