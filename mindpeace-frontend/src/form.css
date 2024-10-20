@@ -220,7 +220,7 @@ body {
   }
   
   button.active {
-    background-color: green;
+    background-color: #2E3B55;
     color: white;
   }
   
