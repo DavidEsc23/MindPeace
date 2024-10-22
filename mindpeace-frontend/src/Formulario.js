@@ -15,11 +15,22 @@ function FormularioPage() {
   };
 
   const handleOptionClick = (questionIndex, option) => {
+    const valueMap = {
+      No: 0,
+      Leve: 1,
+      Moderado: 2,
+      Bastante: 3
+    };
+  
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
-      [questionIndex]: option,
+      [questionIndex]: {
+        Texto_Respuesta: option,
+        Valor_Respuesta: valueMap[option]
+      }
     }));
   };
+  
 
   return (
     <div className="container">
