@@ -125,7 +125,7 @@ body {
   
   .questions-container {
     padding: 20px;
-    background-color: #fff;
+    background-color: #7a9ada;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -220,7 +220,17 @@ body {
   }
   
   button.active {
-    background-color: green;
+    background-color: #2E3B55;
     color: white;
+  }
+  
+  .question-box {
+    background-color: #f0f0f0; /* Color de fondo del cuadro */
+    border: 2px solid #f0f0f0; /* Borde del cuadro */
+    padding: 20px; /* Espaciado interno del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto elevado */
+    max-width: 800px; /* Ancho máximo del cuadro */
+    margin: 20px auto; /* Centrar el cuadro horizontalmente */
   }
   
