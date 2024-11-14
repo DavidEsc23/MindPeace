@@ -29,8 +29,11 @@ function MenuUserPage() {
                     <p>CONFIGURACIÓN<br /><span>Perfil</span></p>
                 </div>
                 <div className="icon-item">
-                    <img src="/icons/test.svg" alt="Test de Ansiedad" />
+                    <a href="/formulario">
+                        <img src="/icons/test.svg" alt="Test de Ansiedad" />
+                    </a>
                     <p>TEST<br /><span>De ansiedad</span></p>
+                    
                 </div>
             </div>
         </div>

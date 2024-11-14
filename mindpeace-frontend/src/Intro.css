@@ -349,3 +349,32 @@ html, body {
     font-size: 0.9rem;
     color: #7B7B7B;
 }
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 49%;
+    transform: translateX(-50%);
+    color: #000000;
+    font-size: 1.2rem;
+    text-align: center;
+    animation: bounce 2s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la flecha debajo del texto */
+}
+
+.scroll-indicator .arrow {
+    font-size: 2rem;
+    margin-top: 5px;
+    
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
