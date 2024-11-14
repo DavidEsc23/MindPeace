@@ -29,6 +29,10 @@ function IntroPage() {
                 </p>
             </div>
 
+            <div className="scroll-indicator">
+            <div className="arrow">⬇️</div>
+            </div>
+
             {/* Sección adicional con imagen e información */}
             <div className="additional-section">
                 <div className="info-image">

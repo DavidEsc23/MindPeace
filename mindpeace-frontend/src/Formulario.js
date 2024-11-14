@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './form.css';
+import { useNavigate } from 'react-router-dom'
 
 function FormularioPage() {
   const [showQuestions, setShowQuestions] = useState(false);
@@ -8,6 +9,7 @@ function FormularioPage() {
   const [answers, setAnswers] = useState({});
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate()
 
   const userId = localStorage.getItem('userId'); // Obtén el userId si lo guardas en el localStorage
 
@@ -57,12 +59,12 @@ function FormularioPage() {
   return (
     <div className="container">
       <header className="header">
-        <div className="logo"></div>
+        <div className="logo" onClick={() => navigate('/')}></div>
         <nav>
           <ul>
             <li><a href="#tutoriales">Tutoriales</a></li>
-            <li><a href="#formulario">Formulario</a></li>
-            <li><a href="#menu">Menú</a></li>
+            <li><a href="formulario">Formulario</a></li>
+            <li><a href="menuUser">Menú</a></li>
           </ul>
         </nav>
         <div className="user-info">
