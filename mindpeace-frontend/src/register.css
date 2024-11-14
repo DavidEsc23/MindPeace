@@ -1,11 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('/public/icons/f-register.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe todo el alto de la ventana */
+  background-image: url('/public/icons/f-register.jpg'); /* Asegúrate de que esta sea la ruta correcta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
   
   .register-box {

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './form.css';  // Asegúrate de tener un archivo CSS para los estilos
 
 function FormularioPage() {
   const [showQuestions, setShowQuestions] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [answers, setAnswers] = useState([]);
+  const navigate = useNavigate();
 
   const handleStart = () => {
     setShowQuestions(true); // Mostrar preguntas y ocultar cuerpo-note
@@ -24,12 +26,12 @@ function FormularioPage() {
   return (
     <div className="container">
       <header className="header">
-        <div className="logo"></div>
+        <div className="logo" onClick={() => navigate('/')}></div>
         <nav>
           <ul>
             <li><a href="#tutoriales">Tutoriales</a></li>
-            <li><a href="#formulario">Formulario</a></li>
-            <li><a href="#menu">Menú</a></li>
+            <li><a href="formulario">Formulario</a></li>
+            <li><a href="menuUser">Menú</a></li>
           </ul>
         </nav>
         <div className="user-info">
