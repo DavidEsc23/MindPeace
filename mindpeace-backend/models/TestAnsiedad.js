@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
 const TestAnsiedadSchema = new Schema({
     Fecha: {
         type: Date,
@@ -22,6 +21,5 @@ const TestAnsiedadSchema = new Schema({
         required: true
     }
 });
-
 
 module.exports = mongoose.model('TestAnsiedad', TestAnsiedadSchema);

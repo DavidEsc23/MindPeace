@@ -28,7 +28,9 @@ function LoginPage() {
         })
         .then(response => {
             const token = response.data.token;
+            const userId = response.data.userId;
             localStorage.setItem('authToken', token);
+            localStorage.setItem('userId', userId); // Almacena el userId en el localStorage
             navigate('/menuUser');
         })
         .catch(error => {

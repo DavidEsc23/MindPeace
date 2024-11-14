@@ -1,9 +1,9 @@
 // routes/resultadoRoutes.js
 const express = require('express');
 const router = express.Router();
-const TestResultado = require('../models/TestResultado');
+const TestResultado = require('../models/testResultado');
 
-router.post('/api/results', async (req, res) => {
+router.post('/', async (req, res) => {
   const { userId, answers } = req.body; // Recibe `userId` y `answers` desde el frontend
 
   // Formatea las respuestas para almacenarlas en el esquema adecuado

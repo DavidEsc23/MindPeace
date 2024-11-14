@@ -8,9 +8,10 @@ const hashPassword = async (password) => {
 };
 
 const generateToken = (user) => {
-    const payload = { user: { id: user.id } };
+    const payload = { user: { id: user._id } }; // Asegúrate de usar `user._id`
     return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 360000 });
 };
+
 
 const loginUser = async (email, password) => {
     const user = await User.findOne({ email });
