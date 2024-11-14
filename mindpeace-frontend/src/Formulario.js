@@ -36,7 +36,7 @@ function FormularioPage() {
 
     // Enviar las respuestas al backend
     try {
-      const response = await axios.post('/api/results', { userId, answers });
+      const response = await axios.post('http://localhost:5000/api/results', { userId, answers });
       console.log('Resultados enviados correctamente:', response.data);
       setSuccess(true);
       setError(null);
