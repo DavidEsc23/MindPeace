@@ -1,0 +1,138 @@
+/* Estilos del header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del contenedor principal */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin-top: 0;
+}
+
+/* Estilos para la fila */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* Estilos para las columnas */
+.col-2 {
+  flex: 0 0 200px;
+}
+
+.col-10 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para la barra lateral (sidebar) */
+.sidebar {
+  width: 100%;
+  background-color: #e0f0f8;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.highlight {
+  font-weight: bold;
+  /* color: #4A69A1; */
+  background-color: #d0e7f2;
+  padding: 5px;
+  border-radius: 4px;
+}
+h2 {
+  font-size: 24px;
+  color: #2b4a67;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #3c5a76;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+/* Estilos para la vista previa */
+.preview {
+  width: 90%;
+  min-height: 350px;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 40px;
+  background-color: transparent; /* Elimina el fondo azul */
+}
+
+.text-content {
+  width: 60%;
+  font-size: 16px;
+  color: #5a7c94;
+  text-align: justify; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #d0e7f2; /* Aplica el fondo azul aquí */
+  border-radius: 8px; /* Añade bordes redondeados si lo deseas */
+  padding: 20px; /* Añade un poco de espacio alrededor del texto */
+}
+
+
+.image-content {
+  width: 35%; /* Ajusta el ancho del contenedor de imagen para permitir que crezca mejor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-content img {
+  width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el contenedor */
+  height: auto;
+  border-radius: 8px;
+}
+/* Animación de entrada lenta */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
