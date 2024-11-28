@@ -5,6 +5,7 @@ import RegisterPage from './register';
 import IntroPage from './Intro';
 import FormularioPage from './Formulario';
 import MenuUserPage from './menuUser';
+import ConfiguracionPage from './configuracion';
 
 function MainApp() {
     return (
@@ -18,6 +19,8 @@ function MainApp() {
                 <Route path="/Intro" element={<IntroPage />} />
                 <Route path="/Formulario" element={<FormularioPage />} />
                 <Route path="/menuUser" element={<MenuUserPage />} />
+                <Route path="/configuracion" element={<ConfiguracionPage />} />
+
             </Routes>
         </BrowserRouter>
     );
