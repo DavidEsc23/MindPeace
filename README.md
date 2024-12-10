@@ -40,7 +40,7 @@
 
 
 ## Documentación
-Para una descripción más detallada del proyecto, consulta la documentación completa:
+Para una descripción más detallada del proyecto, consulta la documentación completa en la carpeta [Documentación](./Documentación).
 
 
 ## Cómo Ejecutarlo
