@@ -9,7 +9,7 @@ html body {
 
   
   .container {
-    max-width: 1800px;
+    max-width: auto;
     margin: 0 auto;
     padding: 0px;
     background-color: #ffffff; /* Fondo blanco */
@@ -63,8 +63,10 @@ html body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     color: #2E3B55;
+    position: relative;
     padding: 20px;
     opacity: 0;
     animation: fadeInText 2s forwards; /* Animación de desvanecimiento */
@@ -83,11 +85,13 @@ html body {
   .main-content h1 {
     font-size: 48px;
     margin-bottom: 10px;
+    margin-left: 40%;
   }
   
   .main-content h2 {
     font-size: 24px;
     margin-bottom: 30px;
+    margin-left: 37%;
   }
   
   .main-content p {
