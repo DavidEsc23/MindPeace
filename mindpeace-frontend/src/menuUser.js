@@ -12,16 +12,18 @@ function MenuUserPage() {
 
     return (
         <div className="menu-container">
-            <nav className="menu-nav">
+            {/* <nav className="menu-nav">
                 <div className="menu-item">
                     <input type="text" placeholder="BUSCAR..." className="search-input" />
                 </div>
                 <div className="menu-item" onClick={handleLoginClick}>INICIAR SESION</div>
-            </nav>
+            </nav>  */}
             <h1 className="menu-title">MINDPEACE</h1>
             <div className="menu-icons">
                 <div className="icon-item">
-                    <img src="/icons/tutorial.svg" alt="Tutorial" />
+                    <a href="/recomBajo">
+                        <img src="/icons/tutorial.svg" alt="Tutorial" />
+                    </a>
                     <p>TUTORIALES<br /><span>Acerca de MindPeace</span></p>
                 </div>
                 <div className="icon-item">
