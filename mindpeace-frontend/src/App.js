@@ -8,6 +8,8 @@ import MenuUserPage from './menuUser';
 import RebajoPage from './recomBajo';
 import ReModeradoPage from './recomModerado'; 
 import ReSeveroPage from './recomSevero';
+import ConfiguracionPage from './Configuracion';
+
 
 
 function MainApp() {
@@ -25,6 +27,8 @@ function MainApp() {
                 <Route path="/recomBajo" element={<RebajoPage />} />
                 <Route path="/recomModerado" element={<ReModeradoPage/>} />
                 <Route path="/recomSevero" element={<ReSeveroPage/>} />
+                <Route path="/Configuracion" element={<ConfiguracionPage />} />
+
 
             </Routes>
         </BrowserRouter>
