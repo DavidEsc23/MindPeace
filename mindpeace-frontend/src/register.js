@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './register.css';
+import API_URL from './config'; // Importa la URL del backend
 
 function RegisterPage() {
     const navigate = useNavigate();
@@ -63,24 +64,24 @@ function RegisterPage() {
 
     const handleRegister = (e) => {
         e.preventDefault();
-
+      
         if (!validateForm()) {
-            return;
+          return;
         }
-
-        axios.post('http://localhost:5000/api/users/register', {
-            username: formData.nombre,
-            email: formData.email,
-            password: formData.password
+      
+        axios.post(`${API_URL}/api/users/register`, { // Cambia la URL base
+          username: formData.nombre,
+          email: formData.email,
+          password: formData.password,
         })
-        .then(response => {
+          .then(response => {
             console.log('Registro exitoso:', response.data);
-            navigate('/login');
-        })
-        .catch(error => {
+            navigate('/login'); // Redirige al login después del registro
+          })
+          .catch(error => {
             console.error('Hubo un error con el registro:', error);
-        });
-    };
+          });
+      };
 
     return (
         <div className="register-container">

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
+import API_URL from './config'; // Importar la URL del backend
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -46,25 +47,25 @@ function LoginPage() {
 
     const handleLogin = (e) => {
         e.preventDefault();
-
+      
         if (!validateForm()) {
-            return;
+          return;
         }
-
-        axios.post('http://localhost:5000/api/users/login', {
-            email: formData.email,
-            password: formData.password
+      
+        axios.post(`${API_URL}/api/users/login`, { // Cambia la URL base
+          email: formData.email,
+          password: formData.password,
         })
-        .then(response => {
+          .then(response => {
             const token = response.data.token;
-            localStorage.setItem('authToken', token);
-            navigate('/menuUser');
-        })
-        .catch(error => {
+            localStorage.setItem('authToken', token); // Guarda el token en localStorage
+            navigate('/menuUser'); // Redirige al menú del usuario
+          })
+          .catch(error => {
             console.error('Error al iniciar sesión:', error);
             setErrorMessage('Error al iniciar sesión. Verifique sus credenciales.');
-        });
-    };
+          });
+      };
 
     const handleRegisterClick = (e) => {
         e.preventDefault(); 
