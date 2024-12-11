@@ -4,7 +4,6 @@ html, body {
     font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo excepto el título */
     background-color: black;
     color: rgb(48, 48, 48);
-    overflow-x: hidden; /* Desactiva el desplazamiento horizontal */
 
   }
   
