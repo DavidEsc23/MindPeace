@@ -1,14 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Importa el hook de navegación
 import "./Configuracion.css";
 
 function Configuracion() {
+  const navigate = useNavigate(); // Hook para redirigir
+
+  const handleSaveChanges = (e) => {
+    e.preventDefault(); // Evita la recarga de la página
+    navigate("/menuUser"); // Redirige al menú de usuario
+  };
+
+  const handleLogoClick = () => {
+    navigate("/intro"); // Redirige a la página de introducción
+  };
+
   return (
     <div className="configuracion-container">
       <header className="configuracion-header">
-        <div className="logo"></div>
+        <div className="logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
+          {/* Agregamos estilo para indicar que es clickeable */}
+        </div>
         <nav>
           <ul className="menu">
-            <li><a href="">Tutoriales</a></li>
+            <li><a href="/recomBajo">Tutoriales</a></li>
             <li><a href="/formulario">Formulario</a></li>
             <li><a href="/menuUser">Menu</a></li>
           </ul>
@@ -42,7 +56,9 @@ function Configuracion() {
                 className="input-field"
               />
             </div>
-            <button className="save-button">Guardar Cambios</button>
+            <button className="save-button" onClick={handleSaveChanges}>
+              Guardar Cambios
+            </button>
           </form>
         </div>
 
