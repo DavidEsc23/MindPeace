@@ -175,22 +175,30 @@ body, html {
   
   /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos pequeños) */
   @media screen and (max-width: 480px) {
+
+    .menu-container {
+      width: 100%; /* Garantiza que no se desborde */
+      box-sizing: border-box; /* Incluye padding y borde dentro del ancho */
+      overflow-x: hidden; /* Desactiva el desplazamiento horizontal */
+
+  
+    }
     .menu-title {
       font-size: 2.5em; /* Ajustamos el tamaño para teléfonos */
-      margin-top: 90px; /* Bajamos un poco más el título */
+      margin-top: 110px; /* Bajamos un poco más el título */
 
     }
 
   .menu-icons {
-    gap: 10px; /* Espacio reducido entre íconos */
+    gap: 8px; /* Espacio reducido entre íconos */
   }
   .menu-nav {
     gap: 8px; /* Reducimos el espacio entre opciones */
-    margin-bottom: 85px; /* Subimos las opciones */
+    margin-bottom: 100px; /* Subimos las opciones */
 
   }
   .menu-item {
-    font-size: 2em; /* Ajustamos el tamaño del texto de las opciones */
+    font-size: 1.8em; /* Ajustamos el tamaño del texto de las opciones */
   }
   
     .icon-item img {
