@@ -5,7 +5,9 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: "https://mindpeace-one.vercel.app", // URL de tu frontend en Vercel
+}));
 app.use(express.json());
 
 // Conectar a MongoDB
