@@ -90,7 +90,7 @@ function FormularioPage() {
         <div className="logo" onClick={() => navigate('/')}></div>
         <nav>
           <ul>
-            <li><a href="#tutoriales">Tutoriales</a></li>
+            <li><a href="#recomModerado">Tutoriales</a></li>
             <li><a href="formulario">Formulario</a></li>
             <li><a href="menuUser">Menú</a></li>
           </ul>
