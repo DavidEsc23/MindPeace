@@ -15,6 +15,7 @@ html body {
     background-color: #ffffff; /* Fondo blanco */
 
   }
+  
   .final-section {
     background-color: #ffffff; /* Fondo blanco para cualquier sección final o pie de página */
 }
@@ -36,13 +37,18 @@ html body {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
+
+
+  /********* ************/
   .header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
   }
   
+    /********* ************/
+
   .header nav ul li a {
     text-decoration: none;
     color: black;
@@ -118,6 +124,7 @@ html body {
     justify-content: center;
     text-align: center;
   }
+  
 .warning-message {
     display: flex;
     align-items: center;  /* Centra la imagen y el texto verticalmente */
@@ -336,7 +343,7 @@ html body {
     align-items: center; /* Centra horizontalmente */
     text-align: center; /* Centra el texto */
     height: 50vh; /* Ocupa la mitad del viewport */
-    max-height: 40vh; /* Limita la altura máxima */
+    /*max-height: 40vh; /* Limita la altura máxima */
     overflow: hidden; /* Corta el contenido que exceda la altura */
     background-image: url('/public/icons/Fondo.svg'); /* Fondo si es necesario */
     background-size: cover; /* Ajusta el tamaño del fondo */

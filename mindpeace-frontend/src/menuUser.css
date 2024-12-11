@@ -1,7 +1,6 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo excepto el título */
     background-color: black;
     color: rgb(48, 48, 48);
