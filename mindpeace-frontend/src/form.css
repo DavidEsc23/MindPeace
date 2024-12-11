@@ -284,3 +284,145 @@ html body {
     margin: 20px auto; /* Centrar el cuadro horizontalmente */
   }
   
+/* CSS Responsivo */
+@media (max-width: 768px) {
+  .container{
+    height: 100%
+  }
+
+  html, body {
+    height: 100%; /* Establece una altura del 100% para el viewport */
+    margin: 0;
+    padding: 0;
+}
+
+  /* Header */
+  .header {
+    display: flex; /* Activa flexbox para alinear los elementos */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px 20px; /* Ajusta el espacio alrededor del contenido */
+    text-align: left; /* Por defecto, alinea texto a la izquierda */
+    height: 100px;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .header .user-info{
+    display: none;
+  }
+
+  .header nav ul {
+    gap: 35px;
+    padding-left: 45px;
+  }
+
+  .header nav ul li a {
+    font-size: 16px; /* Reduce el tamaño del texto */
+  }
+
+  .user-info {
+    flex-direction: column; /* Apila la información del usuario */
+    gap: 5px;
+  }
+
+  /* Main Content */
+  .main-content {
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Apila elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
+    height: 50vh; /* Ocupa la mitad del viewport */
+    max-height: 40vh; /* Limita la altura máxima */
+    overflow: hidden; /* Corta el contenido que exceda la altura */
+    background-image: url('/public/icons/Fondo.svg'); /* Fondo si es necesario */
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    background-position: center; /* Centra el fondo */
+  }
+
+
+  .main-content h1 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    align-self: center;
+    margin: 0; /* Elimina márgenes extra */
+  }
+
+  .main-content h2 {
+    font-size: 1.2rem; /* Ajusta el subtítulo */
+    margin: 0; /* Elimina márgenes extra */
+    margin-top: 10px; /* Espaciado entre h1 y h2 */
+    color: #2a2f36;
+  }
+
+  .main-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Cuerpo Note */
+  .cuerpo-note {
+    padding: 15px;
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+  }
+
+  .cuerpo-note p{
+    font-size: 0.88rem;
+  }
+
+  .warning-message {
+    flex-direction: column; /* Apila ícono y texto */
+    text-align: center;
+    gap: 10px;
+  }
+
+  .warning-icon {
+    width: 40px; /* Reduce tamaño del ícono */
+    height: 40px;
+  }
+
+  /* Botón de Inicio */
+  .start-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Cuestionario */
+  .questions-container {
+    padding: 10px;
+  }
+
+  .question-box {
+    max-width: 100%; /* Usa todo el ancho disponible */
+    padding: 15px;
+  }
+
+  .question label {
+    font-size: 0.9rem;
+  }
+
+  .options {
+    flex-wrap: wrap; /* Permite que los botones bajen en varias filas */
+    gap: 10px;
+  }
+
+  .options button {
+    font-size: 0.8rem; /* Reduce el tamaño de los botones */
+    padding: 8px;
+  }
+
+  /* Resultados */
+  .results-container {
+    padding: 15px;
+  }
+
+  .results-container li {
+    font-size: 0.9rem;
+  }
+
+  .start-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
