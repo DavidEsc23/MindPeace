@@ -135,17 +135,16 @@ body, html {
   @media screen and (max-width: 768px) {
    
     .menu-title {
-      font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
-      font-size: 5em;
-      padding-top: 80px;
-      text-align: center; /* Centra el texto dentro del título */
+      font-size: 3em; /* Reduce el tamaño del título */
+      padding-top: 50px; /* Ajusta el padding superior */
   
     }
   
     .menu-icons {
-      flex-direction: column; /* Cambia la disposición de los íconos a columna */
+      flex-direction: column; /* Cambia la disposición a columna */
       align-items: center;
-      padding-bottom: 10px;
+      gap: 15px; /* Espaciado entre íconos */
+  
     }
   
     .icon-item {
@@ -153,27 +152,29 @@ body, html {
     }
   
     .icon-item img {
-      width: 70px; /* Ajusta el tamaño de los íconos */
-      height: 70px;
+      width: 60px; /* Tamaño más razonable */
+      height: 60px;
     }
   
     .icon-item p {
-      font-size: 0.8em; /* Reduce el tamaño del texto */
+      font-size: 0.9em; /* Ajusta el tamaño del texto */
     }
   
     .icon-item span {
-      font-size: 0.7em; /* Ajusta el tamaño del subtítulo */
+      font-size: 0.8em; /* Ajusta el subtítulo */
     }
   }
   
   /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos pequeños) */
   @media screen and (max-width: 480px) {
     .menu-title {
-      font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
-      font-size: 100em;
-      padding-top: 200px;
-      text-align: center; /* Centra el texto dentro del título */
+      font-size: 2em; /* Tamaño más pequeño para móviles */
+      padding-top: 20px; /* Reduce el espacio superior */
     }
+
+  .menu-icons {
+    gap: 10px; /* Espacio reducido entre íconos */
+  }
   
     .icon-item img {
       width: 50px; /* Ajusta más el tamaño de los íconos */
@@ -181,55 +182,12 @@ body, html {
     }
   
     .icon-item p {
-      font-size: 0.7em; /* Reduce el tamaño del texto */
+      font-size: 0.8em; /* Reduce el tamaño del texto */
     }
   
     .icon-item span {
-      font-size: 0.6em; /* Reduce el tamaño del subtítulo */
+      font-size: 0.7em; /* Reduce el tamaño del subtítulo */
     }
   }
   
-  /* Ajustes para dispositivos en modo horizontal */
- /* Para pantallas móviles y tabletas (hasta 768px de ancho) */
-@media screen and (max-width: 768px) {
-  .menu-icons {
-      display: flex; /* Cambia a disposición en fila */
-      flex-direction: row; /* Asegura que los íconos estén en fila horizontal */
-      justify-content: center; /* Centra los íconos horizontalmente */
-      align-items: center; /* Centra los íconos verticalmente */
-      gap: 20px; /* Espaciado entre los íconos */
-  }
-
-  .icon-item {
-      text-align: center; /* Mantén el texto centrado */
-  }
-
-  .icon-item img {
-      width: 60px; /* Ajusta el tamaño de los íconos */
-      height: 60px;
-  }
-
-  .icon-item p {
-      font-size: 0.8em; /* Ajusta el tamaño del texto */
-  }
-
-  .icon-item span {
-      font-size: 0.7em; /* Ajusta el subtítulo */
-  }
-}
-
-/* Para pantallas muy pequeñas (teléfonos pequeños, menos de 480px) */
-@media screen and (max-width: 480px) {
-  .menu-icons {
-      gap: 10px; /* Reduce el espacio entre los íconos */
-  }
-
-  .icon-item img {
-      width: 50px; /* Ajusta aún más el tamaño de los íconos */
-      height: 50px;
-  }
-
-  .icon-item p {
-      font-size: 0.7em; /* Reduce más el tamaño del texto */
-  }
-}
+ 
