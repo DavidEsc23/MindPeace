@@ -3,8 +3,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo excepto el título */
-    background-color: #1c1c1c;
-    color: white;
+    background-color: black;
+    color: rgb(48, 48, 48);
   }
   
   .menu-container {
@@ -13,21 +13,39 @@ body, html {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
-    background-image: url('/public/icons/fondo.png');
+    background-image: url('/public/icons/menuu2.webp');
     background-size: cover;
     background-position: center;
     text-align: center;
+    padding: 0; /* Elimina cualquier padding extra */
+    margin: 0; /* Elimina márgenes */
+    animation: slideUp 1.5s ease-in-out;
+
   }
+  
   
   .menu-title {
     font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
     font-size: 14em;
     font-weight: normal;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 200px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    text-align: center; /* Centra el texto dentro del título */
+    animation: fadeIn 1.5s ease-in-out; /* Aplica la animación */
+
   }
+  @keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-50px); /* Desplazado hacia arriba */
+    }
+    to {
+        opacity: 1; /* Totalmente visible */
+        transform: translateY(0); /* Posición original */
+    }
+}
   
   .menu-nav {
     display: flex;
@@ -48,18 +66,18 @@ body, html {
     border-radius: 20px;
     padding-left: 15px;
     background-color: transparent; /* Fondo transparente */
-    color: white; /* Color del texto */
-    border: 1px solid white; /* Bordes blancos para visibilidad */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: 1px solid rgb(0, 0, 0); /* Bordes blancos para visibilidad */
   }
   .search-input::placeholder {
-    color: white; /* Color del texto del placeholder */
+    color: rgb(0, 0, 0); /* Color del texto del placeholder */
     opacity: 0.7; /* Transparencia del placeholder */
   }
   
   .search-button {
     border: none;
     background: none;
-    color: white;
+    color: black;
     font-size: 1.2em;
     margin-left: -30px;
     cursor: pointer;
@@ -76,23 +94,142 @@ body, html {
     text-align: center;
     font-size: 0.9em;
     font-weight: normal;
+    animation: bounceIn 1.5s ease-in-out;
+
   }
+  @keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
   
   .icon-item img {
     width: 50px;
     height: 50px;
+    filter: brightness(0.3); 
   }
   
   .icon-item p {
     margin: 5px 0 0 0;
     font-weight: normal;
+    color: rgb(59, 59, 59); /* Texto de los botones en negro */
+    font-weight: bold; /* Si quieres darle más impacto */
   }
+
   
   .icon-item span {
     font-size: 0.8em;
-    color: #bbb;
+    color: rgb(0, 0, 0);
     font-weight: normal;
   }
   
   
+  @media screen and (max-width: 768px) {
+   
+    .menu-title {
+      font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
+      font-size: 5em;
+      padding-top: 80px;
+      text-align: center; /* Centra el texto dentro del título */
   
+    }
+  
+    .menu-icons {
+      flex-direction: column; /* Cambia la disposición de los íconos a columna */
+      align-items: center;
+      padding-bottom: 10px;
+    }
+  
+    .icon-item {
+      margin-bottom: 20px; /* Agrega espacio entre los íconos */
+    }
+  
+    .icon-item img {
+      width: 70px; /* Ajusta el tamaño de los íconos */
+      height: 70px;
+    }
+  
+    .icon-item p {
+      font-size: 0.8em; /* Reduce el tamaño del texto */
+    }
+  
+    .icon-item span {
+      font-size: 0.7em; /* Ajusta el tamaño del subtítulo */
+    }
+  }
+  
+  /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos pequeños) */
+  @media screen and (max-width: 480px) {
+    .menu-title {
+      font-family: 'Rokkitt', serif; /* Fuente Rokkitt solo para el título */
+      font-size: 100em;
+      padding-top: 200px;
+      text-align: center; /* Centra el texto dentro del título */
+    }
+  
+    .icon-item img {
+      width: 50px; /* Ajusta más el tamaño de los íconos */
+      height: 50px;
+    }
+  
+    .icon-item p {
+      font-size: 0.7em; /* Reduce el tamaño del texto */
+    }
+  
+    .icon-item span {
+      font-size: 0.6em; /* Reduce el tamaño del subtítulo */
+    }
+  }
+  
+  /* Ajustes para dispositivos en modo horizontal */
+ /* Para pantallas móviles y tabletas (hasta 768px de ancho) */
+@media screen and (max-width: 768px) {
+  .menu-icons {
+      display: flex; /* Cambia a disposición en fila */
+      flex-direction: row; /* Asegura que los íconos estén en fila horizontal */
+      justify-content: center; /* Centra los íconos horizontalmente */
+      align-items: center; /* Centra los íconos verticalmente */
+      gap: 20px; /* Espaciado entre los íconos */
+  }
+
+  .icon-item {
+      text-align: center; /* Mantén el texto centrado */
+  }
+
+  .icon-item img {
+      width: 60px; /* Ajusta el tamaño de los íconos */
+      height: 60px;
+  }
+
+  .icon-item p {
+      font-size: 0.8em; /* Ajusta el tamaño del texto */
+  }
+
+  .icon-item span {
+      font-size: 0.7em; /* Ajusta el subtítulo */
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos pequeños, menos de 480px) */
+@media screen and (max-width: 480px) {
+  .menu-icons {
+      gap: 10px; /* Reduce el espacio entre los íconos */
+  }
+
+  .icon-item img {
+      width: 50px; /* Ajusta aún más el tamaño de los íconos */
+      height: 50px;
+  }
+
+  .icon-item p {
+      font-size: 0.7em; /* Reduce más el tamaño del texto */
+  }
+}

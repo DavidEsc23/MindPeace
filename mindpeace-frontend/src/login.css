@@ -1,132 +1,170 @@
+/* login.css */
+
+/* Estilos básicos */
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('/public/icons/f-login.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/public/icons/f-login.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #1876D2;
+  animation: fadeIn 1.2s ease;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login-box p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #2E3B55;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #155ab8;
+  transform: scale(1.05);
+}
+
+.login-button:active {
+  transform: scale(0.95);
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.register-link a {
+  color: #1876D2;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de retroceso */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #f3f6f6;
+  background-image: url('/public/icons/Volver.png');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
   }
-  
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Media Queries para tabletas */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 1rem;
+  }
   .login-box {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    border: 2px solid #1876D2;
+      padding: 1.5rem;
   }
-  
-  .login-box h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .login-box p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #666;
-  }
-  
-  .input-group {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-  
-  .login-button {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #1876D2;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .login-button:hover {
-    background-color: #145A9D;
-  }
-  
-  .register-link {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-  }
-  
-  .register-link a {
-    color: #1876D2;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
+}
 
-  .login-button {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    background-color: 
-    #2E3B55;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave para el color y el tamaño */
+/* Media Queries para móviles */
+@media (max-width: 480px) {
+  .login-box {
+      width: 90%;
+      padding: 1rem;
   }
-  
-  .login-button:hover {
-    background-color: #155ab8; /* Cambia a un tono más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Aumenta el tamaño del botón ligeramente */
-  }
-  
-  .login-button:active {
-    transform: scale(0.95); /* Reduce el tamaño del botón al hacer clic para dar sensación de pulsación */
-  }
-
   .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
-    background-color: #f3f6f6;
-    background-image: url('/public/icons/Volver.png'); /* Ruta de la imagen de ícono de retroceso */
-    background-size: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+      width: 35px;
+      height: 35px;
   }
-  
-  .back-button:hover {
-    background-color: #f3f6f6;
-    transform: scale(1.05);
+  .login-box h2 {
+      font-size: 1.5rem;
   }
-  
+  .login-box p {
+      font-size: 0.9rem;
+  }
+  .input-group label {
+      font-size: 0.85rem;
+  }
+  .input-group input {
+      font-size: 0.9rem;
+  }
+  .login-button {
+      font-size: 1rem;
+  }
+  .register-link {
+      font-size: 0.8rem;
+  }
+}
