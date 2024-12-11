@@ -171,16 +171,18 @@ body, html {
   /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos pequeños) */
   @media screen and (max-width: 480px) {
     .menu-title {
-      font-size: 5em; /* Ajustamos el tamaño para teléfonos */
-      padding-top: 100px; /* Bajamos un poco el título */
+      font-size: 4em; /* Ajustamos el tamaño para teléfonos */
+      margin-top: 50px; /* Bajamos un poco más el título */
+
     }
 
   .menu-icons {
     gap: 10px; /* Espacio reducido entre íconos */
   }
   .menu-nav {
-    gap: 15px; /* Reducimos el espacio entre opciones */
-    margin-top: -50px; /* Subimos más las opciones */
+    gap: 8px; /* Reducimos el espacio entre opciones */
+    margin-bottom: 70px; /* Subimos las opciones */
+
   }
   .menu-item {
     font-size: 2em; /* Ajustamos el tamaño del texto de las opciones */
