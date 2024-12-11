@@ -171,8 +171,8 @@ body, html {
   /* Ajustes adicionales para pantallas muy pequeñas (como teléfonos pequeños) */
   @media screen and (max-width: 480px) {
     .menu-title {
-      font-size: 4em; /* Ajustamos el tamaño para teléfonos */
-      margin-top: 50px; /* Bajamos un poco más el título */
+      font-size: 2.5em; /* Ajustamos el tamaño para teléfonos */
+      margin-top: 90px; /* Bajamos un poco más el título */
 
     }
 
@@ -181,7 +181,7 @@ body, html {
   }
   .menu-nav {
     gap: 8px; /* Reducimos el espacio entre opciones */
-    margin-bottom: 70px; /* Subimos las opciones */
+    margin-bottom: 85px; /* Subimos las opciones */
 
   }
   .menu-item {
