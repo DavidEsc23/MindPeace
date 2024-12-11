@@ -378,3 +378,159 @@ html, body {
         transform: translateY(-10px);
     }
 }
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    .intro-header {
+        display: flex; /* Activa flexbox para alinear los elementos */
+        justify-content: space-between; /* Distribuye el espacio entre los elementos */
+        align-items: center; /* Centra verticalmente el contenido */
+        padding: 10px 20px; /* Ajusta el espacio alrededor del contenido */
+        text-align: left; /* Por defecto, alinea texto a la izquierda */
+    }
+
+    .logo{
+        width: 110px; /* Ajusta el tamaño del logo si es necesario */
+        height: 150px; /* Ajusta la altura */
+        background-image: url('/public/icons/MindPeace.png'); /* Ruta del logo */
+        background-size: contain; /* Asegura que el logo se ajuste al contenedor */
+        background-repeat: no-repeat; /* Evita repetición */
+        background-position: center; /* Centra la imagen */
+    }
+
+    .menu-links {
+        display: flex; /* Coloca los enlaces en una fila horizontal */
+        gap: 15px; /* Espaciado entre enlaces */
+        justify-content: flex-end; /* Mueve los enlaces hacia la derecha */
+        font-size: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .menu-link {
+        color: #000; /* Color del texto */
+        text-decoration: none; /* Quita el subrayado */
+        font-weight: bold; /* Negritas para destacar */
+        font-size: 1rem; /* Tamaño del texto */
+        transition: color 0.3s ease; /* Efecto suave al pasar el cursor */
+    }
+
+    
+
+    .hero-section {
+        height: 100vh;
+        background-image: url('/public/icons/Fondo.svg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+        max-width: 100%; /* Evita márgenes laterales extra */
+        margin: 0 auto; /* Centra el contenido */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal en estas secciones */
+        background-attachment: fixed; /* Parallax */
+    }
+
+
+    .intro-title {
+        font-size: 2rem;
+    }
+
+    .intro-description {
+        font-size: 1rem;
+    }
+
+    .additional-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px;
+    }
+
+    .additional-section .floating-box{
+        width: 140px;
+        margin: 28px;
+    }
+
+    .info-image img {
+        width: 80%; /* Reduce tamaño de la imagen */
+        margin: 0 auto;
+    }
+
+    .info-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .info-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-content p {
+        font-size: 1rem;
+        color:#444444;
+    }
+
+    .floating-box {
+        width: 140px; /* Ajusta tamaño */
+        padding: 4px;
+        height: 107px;
+    }
+
+    .floating-box p {
+        font-size: 0.9rem;
+        margin-top: 0;
+    }
+
+    .floating-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .anxiety-section {
+        flex-direction: column-reverse;
+        padding: 35px;
+    }
+
+    .anxiety-content, .anxiety-image {
+        text-align: center;
+        flex: 1;
+        margin-bottom: 30px;
+    }
+
+    .anxiety-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .anxiety-content p {
+        font-size: 1rem;
+        color:#444444;
+    }
+
+    .cta-section {
+        background-color: #f9f9f9;
+        padding: 10px 15px;
+        width: 100vw;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .cta-content {
+        text-align: center;
+    }
+
+    .cta-text {
+        display: none;
+    }
+
+    .cta-button button {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
