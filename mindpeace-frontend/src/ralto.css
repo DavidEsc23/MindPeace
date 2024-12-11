@@ -123,3 +123,63 @@
     opacity: 1;
   }
 }
+
+/* Media Queries para pantallas pequeñas */
+
+/* Pantallas de menos de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-2 {
+    flex: 1 1 100%; 
+    margin-bottom: 20px; 
+  }
+
+  .col-10 {
+    flex: 1 1 100%; 
+  }
+
+  .sidebar {
+    width: 100%; 
+  }
+
+  .preview {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .text-content {
+    width: 125%; 
+    font-size: 14px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin-left: -12.5%; 
+  }
+
+  .image-content {
+    width: 125%; 
+  }
+
+  .image-content img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; 
+  }
+
+  .video-preview {
+    height: 150px; 
+  }
+
+  .cta-button {
+    width: 100%; 
+    padding: 15px 20px; 
+  }
+}

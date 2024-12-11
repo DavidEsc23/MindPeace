@@ -141,3 +141,72 @@
     opacity: 1;
   }
 }
+
+/* Media Queries para pantallas pequeñas */
+
+/* Pantallas de menos de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-2 {
+    flex: 1 1 100%; /* La barra lateral ocupará el 100% del ancho */
+    margin-bottom: 20px; /* Espaciado inferior */
+  }
+
+  .col-10 {
+    flex: 1 1 100%; /* La columna de contenido ocupará todo el espacio */
+  }
+
+  .sidebar {
+    width: 100%; /* La barra lateral ocupa el 100% */
+  }
+
+  .preview {
+    flex-direction: column; /* Los elementos dentro de la vista previa se apilan verticalmente */
+    gap: 20px; /* Reducir el espacio entre los elementos */
+  }
+
+  .text-content {
+    width: 150%; /* Hace que la sección de texto (pasos) sea un 25% más ancha */
+    font-size: 18px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    padding: 10px; /* Añade menos espacio alrededor del texto */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+    margin-left: -12.5%; /* Ajuste para centrar la sección cuando se agranda */
+  }
+
+  .steps-list {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+  }
+
+  .steps-list li {
+    margin-bottom: 10px; /* Espaciado entre los pasos */
+  }
+
+  .image-content {
+    width: 125%; /* Aumenta el ancho de la imagen en un 25% respecto a su tamaño original */
+  }
+
+  .image-content img {
+    width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el contenedor */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Para que la imagen se ajuste al contenedor sin distorsionarse */
+  }
+
+  .video-preview {
+    height: 150px; /* Reduce la altura del video */
+  }
+
+  .cta-button {
+    width: 100%; /* El botón de llamada a la acción ocupa todo el ancho */
+    padding: 15px 20px; /* Ajusta el tamaño del botón */
+  }
+}
