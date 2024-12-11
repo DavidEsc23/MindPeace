@@ -27,7 +27,7 @@ function ReSeveroPage() {
             case "1.1":
                 return (
                     <>
-                        <h2>Exposición Gradual</h2>
+                        <my-title>Exposición Gradual</my-title>
                         <p>Poco a poco, te sentirás más seguro/a enfrentando tus miedos y superarás esas situaciones con éxito.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -46,7 +46,7 @@ function ReSeveroPage() {
             case "1.2":
                 return (
                     <>
-                        <h2>Diario de Síntomas</h2>
+                        <my-title>Diario de Síntomas</my-title>
                         <p>Identificarás lo que te causa ansiedad y podrás trabajar en reducir esos desencadenantes.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -70,7 +70,7 @@ function ReSeveroPage() {
             case "1.3":
                 return (
                     <>
-                        <h2>Mindfulness Avanzado</h2>
+                        <my-title>Mindfulness Avanzado</my-title>
                         <p>Aprenderás a controlar tus pensamientos ansiosos y a encontrar tranquilidad incluso en días difíciles.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -89,7 +89,7 @@ function ReSeveroPage() {
             case "1.4":
                 return (
                     <>
-                        <h2>Terapias Integrativas</h2>
+                        <my-title>Terapias Integrativas</my-title>
                         <p>Al hacer ejercicio, liberarás tensiones y mejorarás tu estado de ánimo de forma natural.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -108,7 +108,7 @@ function ReSeveroPage() {
             case "1.5":
                 return (
                     <>
-                        <h2>Enfoque Cognitivo-Conductual (TCC)</h2>
+                        <my-title>Enfoque Cognitivo-Conductual (TCC)</my-title>
                         <p>Tendrás un plan personalizado para reducir tu ansiedad, con apoyo profesional que te guiará paso a paso.</p>
                         <div className="preview">
                             <div className="text-content">

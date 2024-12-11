@@ -27,7 +27,7 @@ function RebajoPage() {
             case "1.1":
                 return (
                     <>
-                        <h2>Respiración Profunda</h2>
+                        <my-title>Respiración Profunda</my-title>
                         <p>Con este ejercicio, sentirás cómo tu mente y cuerpo se calman, ayudándote a manejar el estrés del día a día.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -48,7 +48,7 @@ function RebajoPage() {
             case "1.2":
                 return (
                     <>
-                        <h2>Mindfulness</h2>
+                        <my-title>Mindfulness</my-title>
                         <p>Este ejercicio te ayudará a mantenerte en el presente, alejando pensamientos que generan ansiedad.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -69,7 +69,7 @@ function RebajoPage() {
             case "1.3":
                 return (
                     <>
-                        <h2>Organización</h2>
+                        <my-title>Organización</my-title>
                         <p>Te sentirás más enfocado/a y organizado/a, evitando el estrés por el desorden en tus actividades.</p>
                         <div className="preview">
                             <div className="text-content">

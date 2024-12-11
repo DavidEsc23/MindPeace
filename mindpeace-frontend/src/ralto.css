@@ -183,3 +183,11 @@
     padding: 15px 20px; 
   }
 }
+
+my-title {
+  font-size: 24px; /* Ajusta el tamaño según lo necesites */
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  display: block; /* Asegúrate de que ocupe el ancho completo */
+}

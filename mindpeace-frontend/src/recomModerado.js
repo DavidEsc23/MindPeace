@@ -27,7 +27,7 @@ function ReModeradoPage() {
             case "1.1":
                 return (
                     <>
-                        <h2>Diario Emocional</h2>
+                        <my-title>Diario Emocional</my-title>
                         <p>Al escribir, comprenderás mejor tus emociones y podrás reducir la intensidad de tus preocupaciones.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -47,7 +47,7 @@ function ReModeradoPage() {
             case "1.2":
                 return (
                     <>
-                        <h2>Liberación de Tensión Física</h2>
+                        <my-title>Liberación de Tensión Física</my-title>
                         <p>Sentirás cómo la tensión física desaparece, permitiéndote descansar y aliviar la ansiedad acumulada.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -67,7 +67,7 @@ function ReModeradoPage() {
             case "1.3":
                 return (
                     <>
-                        <h2>Red de Apoyo</h2>
+                        <my-title>Red de Apoyo</my-title>
                         <p>Al compartir lo que sientes, te sentirás acompañado/a y comprendido/a, lo que disminuirá tu carga emocional.</p>
                         <div className="preview">
                             <div className="text-content">
@@ -86,7 +86,7 @@ function ReModeradoPage() {
             case "1.4":
                 return (
                     <>
-                        <h2>Visualización Positiva</h2>
+                        <my-title>Visualización Positiva</my-title>
                         <p>Podrás imaginarte superando obstáculos con éxito, lo que te dará confianza y reducirá la ansiedad.</p>
                         <div className="preview">
                             <div className="text-content">
